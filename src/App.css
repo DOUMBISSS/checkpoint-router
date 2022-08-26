@@ -1,38 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100;700&family=Bebas+Neue&family=Cairo:wght@300;700&family=Edu+VIC+WA+NT+Beginner&family=Montserrat:wght@100&family=Mouse+Memoirs&family=Orbitron&family=Oswald:wght@200&family=Play&family=Rajdhani:wght@300;700&family=Teko:wght@300;400&family=Titillium+Web:ital,wght@0,700;1,200&display=swap');
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  font-family: 'Cairo', sans-serif;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h3{
+  color: black;
+  margin: 0;
+  font-size: 1rem;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h4{
+  margin: 0;
+  padding: 0;
+}
+header{
+  width: 100%;
+  height: 100px;
+  background-color: black;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.navbar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 90%;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar--left{
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar--right{
+  width: 70%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+ul{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+li{
+    list-style: none;
+    color: white;
+    margin-right: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+li:hover{
+  color: coral;
+}
+input{
+  padding: 0.5rem;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid gainsboro;
+  margin: 5px;
+}
+input:hover{
+  border: 1px solid coral;
+}
+input[type="file"]{
+    padding: 0.5rem;
+    background-color: rgb(232, 231, 231);
+}
+.add--btn--movie{
+  padding: 0.5rem;
+  background-color: coral;
+}
+/* .add--btn--movie:hover{
+  padding: 0.5rem;
+  background-color: co;
+} */
+.container--content{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.categories{
+  width: 100%;
+  height: 50px;
+  /* border: 1px solid coral; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.row{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-around; */
+  flex-wrap: wrap;
+}
+.cards{
+  width: 270px;
+  height: 270px;
+  margin: 5px;
+  border-radius: 0.5rem;
+  background-color: rgb(231, 230, 230);
+  cursor: pointer;
+}
+.cards:hover{
+  /* width: 100%; */
+ transform: scale(1.2);
+ transition: ease-in-out 0.5s;
+ box-shadow: 0 0 20px black;
+}
+.cards--images{
+  width: 100%;
+  height: 55%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.cards--images--box{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.cards--images--box img{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.cards--content{
+  width: 100%;
+  height: 45%;
+  text-align: center;
+}
+.cards--content--box{
+  width: 100%;
+  /* display: flex;
+  align-items: center;
+  justify-content: space-around; */
+}
+.button--block{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+button{
+  padding: 1rem;
+  background-color: coral;
+  color: white;
+  border-radius: 10px;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+.search--bar{
+  width: 100%;
+  height: 50px;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.movie--cards{
+  width: 100%;
+  height: 90vh;
+}
+.movie--cards--content{
+  width: 100%;
+  height: 100%;
+  border: 1px solid gainsboro;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.movie--cards--images{
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.movie--cards--images--box{
+  width: 500px;
+  height: 500px;
+  border-radius: 0.5rem;
+}
+.movie--cards--images--box img{
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  border: 3px solid gainsboro;
+}
+.movie--cards--description{
+  width: 50%;
+  height: 100%;
+  /* border: 1px solid coral; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.movie--cards--description--content{
+    width: 100%;
+    height: 70%;
+    /* border: 1px solid coral; */
+    padding: 1rem;
+}
+.movie--cards--description--content--header{
+  width: 100%;
+}
+.movie--cards--description--content--footer{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  /* border: 1px solid coral; */
+  margin-top: 10px;
+}
+.movie--descriprion{
+  width: 100%;
+}
+p{
+ margin: 0;
+}
+.title--movie{
+  font-size: 30px !important; 
+  color: coral;
+  margin: 0;
+}
+span{
+  font-weight: normal;
+}
+.btn{
+  width: 200px;
+  padding: 0.7rem;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  margin: 0.5rem;
+  cursor: pointer; 
+}
+.btn:nth-child(2){
+  width: 200px;
+  padding: 0.7rem;
+  background-color: coral;
+  color: white;
+  border-radius: 10px;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+.limited--age{
+  width: 50px;
+  height: 30px;
+  border: 1px solid gainsboro;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn--return{
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* .btns--return{
+  text-decoration:none ;
+  background-color: cornflowerblue;
+  color: white;
+  font-weight: 800;
+} */
+.btn--movie{
+  width: 100%;
+}
+.btn--play{
+  width: 200px;
+  padding: 0.3rem;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+.btn--details{
+  width: 200px;
+  padding: 0.3rem;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+.link{
+  text-decoration:none ;
+  color: white;
+  font-weight: 800;
+}
+.link:hover{
+  color:coral;
+}
+.duration{
+  font-weight: normal;
 }
